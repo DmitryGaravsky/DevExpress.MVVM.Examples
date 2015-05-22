@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvvm.ViewModels", "DevExpress.MVVM.Examples\Mvvm.ViewModels.csproj", "{7CACD1D8-7D4F-4F17-B17A-E36F1DD21DC3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvvm.ViewModels", "Mvvm.Examples\Mvvm.ViewModels.csproj", "{7CACD1D8-7D4F-4F17-B17A-E36F1DD21DC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvvm.UI.Win", "DevExpress.MVVM.UI.Win\Mvvm.UI.Win.csproj", "{79C0AC99-26EE-4C06-AB9F-D64470E3D667}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvvm.UI.Win", "Mvvm.UI.Win\Mvvm.UI.Win.csproj", "{79C0AC99-26EE-4C06-AB9F-D64470E3D667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvvm.Utils.UI.Win", "DevExpress.MVVM.Utils.UI.Win\Mvvm.Utils.UI.Win.csproj", "{8DE25E27-EF72-4492-B3A0-E98B616FB354}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvvm.Utils.UI.Win", "Mvvm.Utils.UI.Win\Mvvm.Utils.UI.Win.csproj", "{8DE25E27-EF72-4492-B3A0-E98B616FB354}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI.Win", "UI.Win", "{4100297D-4685-4E84-93E0-D0720B9B4116}"
 EndProject
