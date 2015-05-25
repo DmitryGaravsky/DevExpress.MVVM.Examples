@@ -21,6 +21,9 @@
         }
         // Property for progress
         public int Progress { get; private set; }
+        public double Percent { 
+            get { return (double)Progress * 0.01; }
+        }
         protected IDispatcherService DispatcherService {
             get { return this.GetService<IDispatcherService>(); }
         }
@@ -29,6 +32,7 @@
             {
                 Progress = progress;
                 this.RaisePropertyChanged(x => x.Progress);
+                this.RaisePropertyChanged(x => x.Percent);
             });
         }
     }

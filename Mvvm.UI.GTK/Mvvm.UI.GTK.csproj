@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -36,8 +36,30 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="atk-sharp">
+      <HintPath>..\packages\GtkSharp.3.1.2\lib\net45\atk-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="cairo-sharp">
+      <HintPath>..\packages\GtkSharp.3.1.2\lib\net45\cairo-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gdk-sharp">
+      <HintPath>..\packages\GtkSharp.3.1.2\lib\net45\gdk-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gio-sharp">
+      <HintPath>..\packages\GtkSharp.3.1.2\lib\net45\gio-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="glib-sharp">
+      <HintPath>..\packages\GtkSharp.3.1.2\lib\net45\glib-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gtk-sharp">
+      <HintPath>..\packages\GtkSharp.3.1.2\lib\net45\gtk-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="pango-sharp">
+      <HintPath>..\packages\GtkSharp.3.1.2\lib\net45\pango-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Views\AsyncCommand.cs">
@@ -64,12 +86,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Views\AsyncCommand.resx">
-      <DependentUpon>AsyncCommand.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\SimpleBinding.resx">
-      <DependentUpon>SimpleBinding.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,29 +95,31 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevExpress.Mvvm.Free\DevExpress.Mvvm\Mvvm.PCL.csproj">
-      <Project>{6dc18cb2-a40a-4e9c-9a74-b99ee545b59a}</Project>
+      <Project>{6DC18CB2-A40A-4E9C-9A74-B99EE545B59A}</Project>
       <Name>Mvvm.PCL</Name>
     </ProjectReference>
     <ProjectReference Include="..\DevExpress.MVVM.Utils\Mvvm.Utils\Mvvm.Utils.csproj">
-      <Project>{2fde2dc0-f1dc-4090-84cd-58c0204cc63d}</Project>
+      <Project>{2FDE2DC0-F1DC-4090-84CD-58C0204CC63D}</Project>
       <Name>Mvvm.Utils</Name>
     </ProjectReference>
     <ProjectReference Include="..\Mvvm.Examples\Mvvm.ViewModels.csproj">
-      <Project>{7cacd1d8-7d4f-4f17-b17a-e36f1dd21dc3}</Project>
+      <Project>{7CACD1D8-7D4F-4F17-B17A-E36F1DD21DC3}</Project>
       <Name>Mvvm.ViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\Mvvm.Utils.UI.GTK\Mvvm.Utils.UI.GTK.csproj">
-      <Project>{5dc0e0ac-bb64-44e9-a4ff-43e6348c9017}</Project>
+      <Project>{5DC0E0AC-BB64-44E9-A4FF-43E6348C9017}</Project>
       <Name>Mvvm.Utils.UI.GTK</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\GtkSharp.3.1.2\build\net45\GtkSharp.targets" Condition="Exists('..\packages\GtkSharp.3.1.2\build\net45\GtkSharp.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

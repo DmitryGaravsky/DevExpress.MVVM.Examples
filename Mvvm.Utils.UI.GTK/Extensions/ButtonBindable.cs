@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq.Expressions;
-//using System.Windows.Forms;
+using Gtk;
 using Mvvm.Utils.Commands;
 
 namespace Mvvm.Utils.UI.GTK {
@@ -15,20 +15,20 @@ namespace Mvvm.Utils.UI.GTK {
             }
             public void BindCommand(object command, Func<object> queryCommandParameter = null) {
                 CommandHelper.Bind(targetButton,
-                    (button, execute) => button.Click += (s, e) => execute(),
-                    (button, canExecute) => button.Enabled = canExecute(),
+                    (button, execute) => button.Clicked += (s, e) => execute(),
+                    (button, canExecute) => button.Sensitive = canExecute(),
                     command, queryCommandParameter);
             }
-            public void BindCommand(Expression<Action> commandSelector, object source, Func<object> queryCommandParameter = null) {
+            public void BindCommand(Expression<System.Action> commandSelector, object source, Func<object> queryCommandParameter = null) {
                 CommandHelper.Bind(targetButton,
-                    (button, execute) => button.Click += (s, e) => execute(),
-                    (button, canExecute) => button.Enabled = canExecute(),
+                    (button, execute) => button.Clicked += (s, e) => execute(),
+                    (button, canExecute) => button.Sensitive = canExecute(),
                     commandSelector, source, queryCommandParameter);
             }
             public void BindCommand<T>(Expression<Action<T>> commandSelector, object source, Func<T> queryCommandParameter = null) {
                 CommandHelper.Bind(targetButton,
-                    (button, execute) => button.Click += (s, e) => execute(),
-                    (button, canExecute) => button.Enabled = canExecute(),
+                    (button, execute) => button.Clicked += (s, e) => execute(),
+                    (button, canExecute) => button.Sensitive = canExecute(),
                     commandSelector, source, () => (queryCommandParameter != null) ? queryCommandParameter() : default(T));
             }
         }

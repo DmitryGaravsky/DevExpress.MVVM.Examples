@@ -23,8 +23,6 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
-    <ReleaseVersion>
-    </ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -41,14 +39,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moq, Version=4.2.1502.911, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+      <Package>nunit</Package>
+    </Reference>
+    <Reference Include="Moq, Version=4.2.1502.911, Culture=neutral, PublicKeyToken=69f491c39445e920">
+      <HintPath>..\..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -75,7 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevExpress.Mvvm\Mvvm.PCL.csproj">
-      <Project>{6dc18cb2-a40a-4e9c-9a74-b99ee545b59a}</Project>
+      <Project>{6DC18CB2-A40A-4E9C-9A74-B99EE545B59A}</Project>
       <Name>Mvvm.PCL</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,23 +1,23 @@
-﻿using System.Windows.Forms;
+﻿using Gtk;
 using Mvvm.Examples;
 using Mvvm.Utils.UI.GTK;
 
 namespace Mvvm.UI.GTK {
-    public partial class SimpleBindingForm : Form {
+    public partial class SimpleBindingWindow : Window {
         GTKMVVMContext mvvmContext;
-        public SimpleBindingForm() {
-            this.mvvmContext = new GTKMVVMContext(components);
-            this.mvvmContext.ContainerControl = this;
+        public SimpleBindingWindow() : base(WindowType.Toplevel) {
+            this.mvvmContext = new GTKMVVMContext(this);
             InitializeComponent();
-            if(!DesignMode)
-                InitBindings();
+            InitBindings();
+
+            ShowAll();
         }
         void InitBindings() {
             mvvmContext.ViewModelType = typeof(ViewModelForSimpleBinding);
 
             var fluent = mvvmContext.OfType<ViewModelForSimpleBinding>();
-            fluent.SetBinding(this, f => f.Text, x => x.Title);
-            fluent.SetBinding(tbTitle, t => t.Text, x => x.Title);
+            fluent.SetBinding(this, f => f.Title, x => x.Title);
+            fluent.SetBinding(entryTitle.AsEditableEntry(), e => e.Text, x => x.Title);
             fluent.BindCommand(btnResetTtile.AsCommandBindable(), x => x.ResetTitle());
         }
     }

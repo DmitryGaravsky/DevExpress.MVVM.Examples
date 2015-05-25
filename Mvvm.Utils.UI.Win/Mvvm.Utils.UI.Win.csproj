@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevExpress.MVVM.Utils\Mvvm.Utils\Mvvm.Utils.csproj">
-      <Project>{2fde2dc0-f1dc-4090-84cd-58c0204cc63d}</Project>
+      <Project>{2FDE2DC0-F1DC-4090-84CD-58C0204CC63D}</Project>
       <Name>Mvvm.Utils</Name>
     </ProjectReference>
   </ItemGroup>

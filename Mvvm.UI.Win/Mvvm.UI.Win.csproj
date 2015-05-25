@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -87,19 +87,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Mvvm.Examples\Mvvm.ViewModels.csproj">
-      <Project>{7cacd1d8-7d4f-4f17-b17a-e36f1dd21dc3}</Project>
+      <Project>{7CACD1D8-7D4F-4F17-B17A-E36F1DD21DC3}</Project>
       <Name>Mvvm.ViewModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\DevExpress.Mvvm.Free\DevExpress.Mvvm\Mvvm.PCL.csproj">
-      <Project>{6dc18cb2-a40a-4e9c-9a74-b99ee545b59a}</Project>
+      <Project>{6DC18CB2-A40A-4E9C-9A74-B99EE545B59A}</Project>
       <Name>Mvvm.PCL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Mvvm.Utils.UI.Win\Mvvm.Utils.UI.Win.csproj">
-      <Project>{8de25e27-ef72-4492-b3a0-e98b616fb354}</Project>
+      <Project>{8DE25E27-EF72-4492-B3A0-E98B616FB354}</Project>
       <Name>Mvvm.Utils.UI.Win</Name>
     </ProjectReference>
     <ProjectReference Include="..\DevExpress.MVVM.Utils\Mvvm.Utils\Mvvm.Utils.csproj">
-      <Project>{2fde2dc0-f1dc-4090-84cd-58c0204cc63d}</Project>
+      <Project>{2FDE2DC0-F1DC-4090-84CD-58C0204CC63D}</Project>
       <Name>Mvvm.Utils</Name>
     </ProjectReference>
   </ItemGroup>

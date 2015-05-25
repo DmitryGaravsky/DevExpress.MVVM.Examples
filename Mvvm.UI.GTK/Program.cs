@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Windows.Forms;
+using Gtk;
 
 namespace Mvvm.UI.GTK {
     static class Program {
@@ -8,14 +8,15 @@ namespace Mvvm.UI.GTK {
         /// </summary>
         [STAThread]
         static void Main() {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Init ();
 
             // Example 01.
-            Application.Run(new SimpleBindingForm());
+            new SimpleBindingWindow();
 
             // Example 02.
-            //Application.Run(new AsyncCommandForm());
+            //new AsyncCommandWindow();
+
+            Application.Run();
         }
     }
 }
