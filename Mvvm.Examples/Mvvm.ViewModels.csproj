@@ -37,9 +37,23 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ViewModel.cs" />
+    <Compile Include="01. Theory %28INPC%29\Ext_Impl.cs" />
+    <Compile Include="01. Theory %28INPC%29\Base_Impl.cs" />
+    <Compile Include="01. Theory %28INPC%29\POCO_Impl.cs" />
+    <Compile Include="02. Theory %28Commans%29\Base_Impl.cs" />
+    <Compile Include="02. Theory %28Commans%29\Ext_Impl.cs" />
+    <Compile Include="02. Theory %28Commans%29\POCO_Impl.cs" />
+    <Compile Include="Practice\ViewModelForAsyncCommand.cs" />
+    <Compile Include="Practice\ViewModelForSimpleBinding.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DevExpress.Mvvm.Free\DevExpress.Mvvm\Mvvm.PCL.csproj">
+      <Project>{6dc18cb2-a40a-4e9c-9a74-b99ee545b59a}</Project>
+      <Name>Mvvm.PCL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

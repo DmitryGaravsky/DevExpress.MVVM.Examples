@@ -3,8 +3,8 @@
     using System.Collections.Generic;
     using System.Reflection;
 
-    sealed class MVVMTypesResolver : IMVVMTypesResolver {
-        readonly internal static IMVVMTypesResolver Instance = new MVVMTypesResolver();
+    public sealed class MVVMTypesResolver : IMVVMTypesResolver {
+        readonly public static IMVVMTypesResolver Instance = new MVVMTypesResolver();
         //
         static Type viewModelSourceType;
         Type IMVVMTypesResolver.GetViewModelSourceType() {

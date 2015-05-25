@@ -1,7 +1,7 @@
 namespace Mvvm.Utils {
     using System;
 
-    internal interface IMVVMTypesResolver {
+    public interface IMVVMTypesResolver {
         Type GetViewModelSourceType();
         Type GetSupportParentViewModelType();
         Type GetSupportParameterType();

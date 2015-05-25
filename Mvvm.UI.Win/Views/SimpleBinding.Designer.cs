@@ -1,5 +1,5 @@
 ﻿namespace Mvvm.UI.Win {
-    partial class MainForm {
+    partial class SimpleBindingForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -27,30 +27,35 @@
             this.tbTitle = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnUpdateTtile
+            // btnResetTtile
             // 
             this.btnResetTtile.AutoSize = true;
-            this.btnResetTtile.Location = new System.Drawing.Point(35, 90);
-            this.btnResetTtile.Name = "btnUpdateTtile";
-            this.btnResetTtile.Size = new System.Drawing.Size(138, 35);
+            this.btnResetTtile.Location = new System.Drawing.Point(12, 36);
+            this.btnResetTtile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnResetTtile.Name = "btnResetTtile";
+            this.btnResetTtile.Size = new System.Drawing.Size(69, 23);
             this.btnResetTtile.TabIndex = 0;
             this.btnResetTtile.Text = "Reset Title";
             // 
-            // textBox1
+            // tbTitle
             // 
-            this.tbTitle.Location = new System.Drawing.Point(35, 53);
-            this.tbTitle.Name = "textBox1";
-            this.tbTitle.Size = new System.Drawing.Size(727, 31);
+            this.tbTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbTitle.Location = new System.Drawing.Point(12, 12);
+            this.tbTitle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbTitle.Name = "tbTitle";
+            this.tbTitle.Size = new System.Drawing.Size(360, 20);
             this.tbTitle.TabIndex = 1;
             // 
-            // MainForm
+            // SimpleBindingForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 529);
+            this.ClientSize = new System.Drawing.Size(384, 111);
             this.Controls.Add(this.tbTitle);
             this.Controls.Add(this.btnResetTtile);
-            this.Name = "MainForm";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "SimpleBindingForm";
+            this.Padding = new System.Windows.Forms.Padding(12, 12, 12, 12);
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

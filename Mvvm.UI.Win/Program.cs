@@ -10,7 +10,12 @@ namespace Mvvm.UI.Win {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            
+            // Example 01.
+            Application.Run(new SimpleBindingForm());
+
+            // Example 02.
+            //Application.Run(new AsyncCommandForm());
         }
     }
 }

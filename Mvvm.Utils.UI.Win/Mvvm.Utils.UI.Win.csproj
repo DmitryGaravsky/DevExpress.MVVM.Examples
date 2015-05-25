@@ -38,9 +38,10 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtonBindable.cs" />
+    <Compile Include="Extensions\ButtonBindable.cs" />
     <Compile Include="MVVMContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DispatcherService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DevExpress.MVVM.Utils\Mvvm.Utils\Mvvm.Utils.csproj">

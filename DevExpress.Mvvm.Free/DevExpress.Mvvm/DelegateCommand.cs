@@ -291,7 +291,7 @@ namespace DevExpress.Mvvm {
         }
         public AsyncCommand(Func<T, Task> executeMethod, Func<T, bool> canExecuteMethod, bool allowMultipleExecution)
             : base(executeMethod, canExecuteMethod) {
-            CancelCommand = new DelegateCommand(Cancel);
+            CancelCommand = new DelegateCommand(Cancel, CanCancel);
             AllowMultipleExecution = allowMultipleExecution;
         }
 #endif

@@ -3,9 +3,9 @@ using Mvvm.Examples;
 using Mvvm.Utils.UI.Win;
 
 namespace Mvvm.UI.Win {
-    public partial class MainForm : Form {
+    public partial class SimpleBindingForm : Form {
         WinMVVMContext mvvmContext;
-        public MainForm() {
+        public SimpleBindingForm() {
             this.mvvmContext = new WinMVVMContext(components);
             this.mvvmContext.ContainerControl = this;
             InitializeComponent();
@@ -13,9 +13,9 @@ namespace Mvvm.UI.Win {
                 InitBindings();
         }
         void InitBindings() {
-            mvvmContext.ViewModelType = typeof(ViewModel);
+            mvvmContext.ViewModelType = typeof(ViewModelForSimpleBinding);
 
-            var fluent = mvvmContext.OfType<ViewModel>();
+            var fluent = mvvmContext.OfType<ViewModelForSimpleBinding>();
             fluent.SetBinding(this, f => f.Text, x => x.Title);
             fluent.SetBinding(tbTitle, t => t.Text, x => x.Title);
             fluent.BindCommand(btnResetTtile.AsCommandBindable(), x => x.ResetTitle());
