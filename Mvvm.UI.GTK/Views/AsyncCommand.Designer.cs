@@ -1,7 +1,7 @@
 ﻿namespace Mvvm.UI.GTK {
     partial class AsyncCommandWindow {
         private void InitializeComponent() {
-            Gtk.Box box = new Gtk.Box(Gtk.Orientation.Vertical,12);
+            Gtk.Box box = new Gtk.Box(Gtk.Orientation.Vertical, 4);
             this.progressBar = new Gtk.ProgressBar();
             this.btnCalc = new Gtk.Button();
             this.btnCancel = new Gtk.Button();
@@ -25,6 +25,7 @@
             box.Add(this.progressBar);
             box.Add(this.btnCalc);
             box.Add(this.btnCancel);
+            box.Margin = 12;
 
             this.Add(box);
             this.Name = "AsyncCommandForm";
@@ -35,7 +36,7 @@
         Gtk.Button btnCalc;
         Gtk.Button btnCancel;
 
-        protected override bool OnDeleteEvent(Gdk.Event e){
+        protected override bool OnDeleteEvent(Gdk.Event e) {
             Gtk.Application.Quit();
             return true;
         }

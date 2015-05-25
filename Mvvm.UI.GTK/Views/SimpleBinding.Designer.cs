@@ -1,7 +1,7 @@
 ﻿namespace Mvvm.UI.GTK {
     partial class SimpleBindingWindow {
         private void InitializeComponent() {
-            Gtk.Box box = new Gtk.Box(Gtk.Orientation.Vertical, 12);
+            Gtk.Box box = new Gtk.Box(Gtk.Orientation.Vertical, 4);
 
             this.btnResetTtile = new Gtk.Button();
             this.entryTitle = new Gtk.Entry();
@@ -19,9 +19,8 @@
             // 
             box.Add(this.entryTitle);
             box.Add(this.btnResetTtile);
-
+            box.Margin = 12;
             this.Add(box);
-            this.Margin = 12;
             this.Name = "SimpleBindingForm";
             this.Title = "MVVM Practices: Simplle Binding";
             this.WidthRequest = 400;
