@@ -6,7 +6,7 @@
         public ViewModelWithCommands_ExtImpl() {
             SomeCommand = new DelegateCommand(DoSomething, CanDoSomething);
         }
-        // Property for SomeLegacyCommand
+        // Property for SomeCommand
         public ICommand SomeCommand {
             get;
             private set;
